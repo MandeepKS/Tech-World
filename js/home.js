@@ -118,9 +118,9 @@
       var blogImage = blogData._embedded[image][0].link;
       var blogImageAlt = blogData._embedded[image][0].alt_text;
 
-      const blogElements = document.querySelector(".container-2");
+      const blogElements = document.querySelector(".carousel-inner");
       blogElements.innerHTML += `<a href="blog.html?id=${blogData.id}">
-                                    <div class="feature-products-card carousel-inner">
+                                    <div class="feature-products-card blog-slider">
                                        <img src="${blogImage}" alt="${blogImageAlt}">
                                        <p>Blog article</p>
                                        <h4 class="ftr-prdt-name">${blogData.title.rendered}</h4>
@@ -151,7 +151,7 @@
       
    }
    export function update(){
-      let value = currentSlide * 110;
+      let value = currentSlide * 40;
       var slider = document.querySelector('.carousel-inner').style.transform = `translateX(-${value}%)`;
       console.log(slider);
    }
