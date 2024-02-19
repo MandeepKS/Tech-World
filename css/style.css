@@ -41,35 +41,17 @@ body{
 
 /* buttons */
 .btn-yellow{
-    color:var(--our-black);
+    color:white;
     text-decoration: none;
-    background-color: var(--our-yellow);
+    background-color: var(--our-mehroon-red);
     border-radius: 50px;
     transition: ease-in 0.4s;
 
 }
 
 .btn-yellow:hover{
-  background-color: var(--font-dark-grey);
-  
-}
-
-.btn-outeryellow{
-    color: var(--our-black);
-    text-decoration: none;
-    border-radius: 50px;
-    transition: all 0.4s;
-    background-color:var(--font-dark-grey);
-}
-
-.btn-outeryellow:hover{
-   background-color: var(--our-yellow);
-}
-
-.btn-black{
-    color: white;
-    text-decoration:none;
-    background-color: var(--our-black);
+  background-color: var(--our-light-pink);
+  color:var(--our-black);
 }
 /* ---end of buttons */
 
@@ -562,7 +544,7 @@ footer{
 }
 
 .contact-container-1{
-    margin: 2% 7% 2% 2%;
+    margin: 2% 7% 2% 6%;
     padding: 2%;
 }
 
@@ -584,7 +566,7 @@ footer{
     margin-bottom: 5%;
     padding-bottom: 2%;
     border: none;
-    border-bottom: 1px solid var(--our-yellow);
+    border-bottom: 1px solid var(--our-mehroon-red);
     font-size: 18px;
 
 
@@ -600,7 +582,7 @@ footer{
 
 .contact-container-2 input:focus, textarea:focus{
     outline: none;
-    border-bottom: 2px solid var(--our-yellow);
+    border-bottom: 2px solid var(--our-mehroon-red);
 }
 
 
@@ -617,191 +599,6 @@ footer{
 /* ###### END OF CONTACT PAGE ####### */
 
 
-
-
-
-
-
-
-/*
-*
-*
-* ######## PRODUCT DETAIL PAGE ######
-*
-*
- */
-
- .productdetail-container-1{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    height: auto;
-    gap: 3%;
-
-
-
-}
-
- .prodt-price{
-    font-size: 15px;
-    margin-bottom: 1%;
- }
-
- .prodt-tax-detail{
-    font-size: 10px;
-    font-weight: 400;
-    margin-bottom: 2%;
- }
-
- .prodt-desc{
-    font-size: 15px;
-    font-weight: 300;
-    margin-right: 2%;
-    margin-bottom: 3%;
-    padding-right: 5%;
- }
- .prodt-detail img{
-   
-    max-width: 100%;
-    max-height: auto;
-    object-fit: cover;
-    
- }
-
-
- .prodt-size{
-    display: flex;
-}
-
-.prodt-size a{
-    text-decoration: none;
-    margin: 2% 2% 3% 0;
-    padding: 1%;
-    color: var(--our-black);
-    border: 1px solid var(--our-black);
- }
-
- .prodt-size a:hover ,li:hover{
-
-    color: var(--our-yellow);
- }
-
- /* Product Add to cart button */
-
- .product-btn{
-    padding: 1% 11%;
- }
-
- /* ### End of Product Detail Page ##### */
-
-
-
-
-
-/*
-#
-#
-#
-########## CHECKOUT PAGE ##############
-#
-#
-#
-# */
-
-.checkout-title-container-1{
-    text-align: center;
-    margin-bottom: 5%;
-}
-
-.checkout-container-2{
-    display: flex;
-    gap:3%;
-}
-
-.section-1{
-    width:40%;
-}
-.section-1 p{
-    margin-bottom: 2%;
-}
-.section-1 input{
-    width: 100%;
-    margin-bottom: 3%;
-    padding: 1%;
-}
-/* ## Image order preview title ## */
-.order-preview img{
-    /* height: auto;
-    width: auto; */
-    max-width: 90%;
-    max-height: 200px;
-
-    margin-left: 3%;
-}
-.section-3{
-    width:50%;
-}
-.section-3,.section-2{
-    margin-top: 5%;
-}
-
-.checkout-prodt-price{
-    margin-top: 5%;
-}
-
-.checkout-prodt-shipping,.checkout-prodt-total-price,.checkout-button{
-    margin-left: 50%;
-}
-
-.checkout-prodt-total-price{
-    margin-bottom: 3%;
-}
-.checkout-button{
-    padding: 1%;
-}
-
-.shipping-free,.price-in-krone{
-   margin-left: 15%;
-}
-
-.credit-debit-card{
-    margin: 2% 0 3% 10%;
-
-}
-.credit-card-pay{
-    padding: 2% 10%;
-    font-size: 18px;
-    font-weight: 700;
-    border-width: 0;
-
-}
-
-
-.checkout-prodt-size,.checkout-prodt-color,.checkout-prodt-quantity,.checkout-section1-subtitle{
-    font-weight: 300;
-    font-size: 15px;
-}
- /* ### End of CHECK-OUT Page ##### */
-
-
-
-
-/* 
-#######################################
-#                                     #
-#                                     #
-#   #### PAYMENT SUCESSFULL #######   #
-#  #                               #  #
-# #                                 # #
-#######################################
- */
-
- .paymentsucessfull{
-    display: grid;
-    grid-template-columns: 2fr;
-    margin-top: 15%;
-    background-color: var(--our-grey);
-    
-}
 /* Media query for large screen */
 @media only screen and (min-width:1281px) {
     /* Logo */
