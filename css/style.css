@@ -449,7 +449,7 @@ footer{
     max-width: 100%;
     align-items: center;
 }
-.single-blogpost p, h4{
+.single-blogpost p,.single-blogpost h4{
     margin-left: 1rem;
 }
 .single-blogpost:hover{
