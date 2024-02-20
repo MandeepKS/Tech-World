@@ -939,4 +939,14 @@ footer{
         margin:1rem;
     }
     /* End of blog page */
+
+    /* Home page carousel slider */
+    .carousel-inner{
+        overflow-x: scroll;
+    }
+    .carousel-icon {
+        margin-left: -1.6rem;
+        margin-right: -1.7rem;
+    }
+    /* End of Home page carousel slider */
 }
