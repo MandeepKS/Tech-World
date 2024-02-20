@@ -218,6 +218,7 @@ nav .footer-nav li,nav .social-media{
     color: var(--our-mehroon-red);
     margin-left:2em;
     margin-right:2em;
+   
 }
 
 .carousel-icon:hover{
@@ -231,7 +232,7 @@ nav .footer-nav li,nav .social-media{
 /* ---Container -2  */
 .container-2{
     display:flex;
-    gap:2rem;
+    gap:0.5rem;
     max-width: 100%;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -354,7 +355,7 @@ nav .footer-nav li,nav .social-media{
     margin-top:0.5rem;
 }
 .blog-text-brief{
-    width: 250px;
+    max-width: 250px;
     max-height: auto;
 }
 .blog-text-brief p{
@@ -605,21 +606,16 @@ footer{
     .jumbotron-text{
         display: flex;
     }
+    .carousel-icon{
+        margin-left:6rem;
+        margin-right:6rem;
+    }
 }
 
 /* Responsiveness Table and desktop */
 
 @media only screen and (max-width:900px){
-    /*********************
-    *
-    #%%%%%% Home page %%%%%%%%%
-    *
-    **********************/ 
-  
-    .blog-text-brief p{
-        margin-right: 1.8rem;
-    }
-
+ 
     /* ############///////////
     #
     #%%%%%% Contact page %%%%%%%%
@@ -694,9 +690,7 @@ footer{
     /* --end of container-2 --- */
 
     /* -----Container-4--  */
-    .blog-text-brief p{
-        margin-right: 3rem;
-    }
+    
     /* ---end of container-4-- */
 
     /* ----footer--- */
@@ -806,6 +800,10 @@ footer{
         .feature-products-card img{
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
+        }
+        .carousel-icon{
+            margin-left:0.5rem;
+            margin-right:0.5rem;
         }
     /* ------End of Conrtainer-2 ----*/
     /* -----Container-4--  */
