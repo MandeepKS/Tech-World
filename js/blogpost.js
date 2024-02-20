@@ -50,13 +50,13 @@
  
    const modifiedBlogDate = newDate+'/'+ newMonth +'/'+ newYear;
    const blogArticleElements = document.querySelector(".blog-container-1");
-   blogArticleElements.innerHTML += ` <div class="feature-products-card blog-brief single-blogpost">
+   blogArticleElements.innerHTML += ` <div class="feature-products-card single-blogpost">
                                         <img src="${blogImage}" alt="${blogData.title.rendered}">
-                                        <p>${modifiedBlogDate}</p>
-                                        <h4 class="ftr-prdt-name">${blogData.title.rendered}</h4>
-                                          <span class="blog-description">
-                                              <p>${blogData.content.rendered}</p>
-                                          </span>
+                                        <h4 class="ftr-prdt-name single-blog-title">${blogData.title.rendered}</h4>
+                                        <span class="blog-description">
+                                        <p>${blogData.content.rendered}</p>
+                                        </span>
+                                        <p>Posted:-> ${modifiedBlogDate}</p>
                                       </div>`
  }
  

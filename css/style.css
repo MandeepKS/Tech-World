@@ -91,18 +91,18 @@ nav .nav-mobile{
     
 }
 
- .hamburger-open,#menu-checkbox {
+.hamburger-open,#menu-checkbox {
     display: none;
-  }
+}
 
 nav .nav-mobile{
     display: none;
 }
 
 /* Close mobile nav menu , when it is opened */
- nav .nav-mobile li{
+nav .nav-mobile li{
      margin-top: 25%;
-   }
+}
 
 /* ### End of mobile navbar### */
 
@@ -129,7 +129,6 @@ nav ul li a {
     font-weight:bold;
     font-size: 15px;
     color : var(--our-black);
-    
 }
 
 nav ul li a:hover{
@@ -149,16 +148,7 @@ nav .footer-nav li,nav .social-media{
 
 /* End of footer navmenu */
 
-/* Rainy_home class is for just 'Home' menu only.
-   It changes the home menu color to yellow. */
 
-/* .rainy_home{
-    color: var(--our-yellow);
-}
-
-.rainy_home:hover{
-   color:var(--our-black);
-} */
 /* end of navbar */
 
 
@@ -195,9 +185,6 @@ nav .footer-nav li,nav .social-media{
    /* text-align: right; */
    align-items: center;
 }
-.jumbotron-text-yellow{
-    color:var(--our-yellow);
-}
 
 .jumbotron-text h3{
     font-family: 'Inria Sans', sans-serif;
@@ -205,26 +192,6 @@ nav .footer-nav li,nav .social-media{
     font-weight: 300;
     margin-bottom: 15px;
 
-}
-
-.btn-yellow.jumbo{
-
-    padding: 7px 40px;
-    margin-right: 10px;
-    font-family: 'Inder', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    
-
-}
-
-.btn-outeryellow.jumbo{
-
-    padding: 7px 40px;
-    font-family: 'Inder', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: var(--our-black);
 }
 /* -----------end of jumbotron */
 
@@ -308,7 +275,7 @@ nav .footer-nav li,nav .social-media{
     background: white;
     padding: 0.7rem;
     align-items: flex-end;
-    min-width: 250px;
+    min-width: 180px;
 }
 
 .feature-products-card h4 {
@@ -318,14 +285,17 @@ nav .footer-nav li,nav .social-media{
 }
 
 .feature-products-card p{
-    font-size: 15px;
-    line-height: 21.78px;
+    font-size: 14px;
+    line-height: 20px;
     margin-top: 0.5rem;
+    padding-right: 0.5rem;
+    text-align:left;
     color:var(--our-mehroon-red);
 }
 .feature-products-card img{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    height: 200px;
 }
 .feature-products-card img:hover{
     animation-name: scaleout;
@@ -442,6 +412,7 @@ footer{
     display: flex;
     max-width: 100%;
     margin: 3rem;
+    width:fit-content;
 }
 .blog-container-1 img{
     max-height: fit-content;
@@ -451,16 +422,21 @@ footer{
     object-fit: fill;
 }
 .blog-description{
-    width:50rem;
+   max-width:35rem;
+   
 }
 .blog-description p{
     color: black;
+    text-align:start; 
 }
 .blog-description ol, .blog-description li{
     padding:1rem;
+    font-size: 14px;
+    margin-left: 1rem;
 }
 .blog-description ul, .blog-description li{
     padding:1rem;
+    margin-left: 1rem;
 }
 .blog-description ol li:hover{
     color: black;
@@ -468,11 +444,22 @@ footer{
 .blog-description ul li:hover{
     color: black;
 }
+.single-blogpost{
+    
+    max-width: 100%;
+    align-items: center;
+}
+.single-blogpost p, h4{
+    margin-left: 1rem;
+}
 .single-blogpost:hover{
     border:2px solid white;
 }
 .single-blogpost img:hover{
     transform: none;
+}
+.single-blog-title{
+    margin-top:2rem;
 }
 /* End of Blog post page */
 /*
@@ -623,44 +610,19 @@ footer{
 /* Responsiveness Table and desktop */
 
 @media only screen and (max-width:900px){
-
-     /* Jumbotron section */
-
-      .btn-yellow.jumbo{
-
-         padding: 7px 30px;
-         margin-right: 10px;
-         font-weight: 400;
-         font-size: 15px;
-
-     }
-
-     .btn-outeryellow.jumbo{
-
-         padding: 7px 30px;
-         font-weight: 400;
-         font-size: 15px;
-     }
-
-     /* End of jumbotron section */
-
-    /* Container-2 */
-     .container-2-images{
-        flex-direction: column;
-
-     }
-
-     .container-2-images h5{
-         margin: 10px 0 30px 0;
-     }
-    /* end of container -2  */
+    /*********************
+    *
+    #%%%%%% Home page %%%%%%%%%
+    *
+    **********************/ 
+  
+    .blog-text-brief p{
+        margin-right: 1.8rem;
+    }
 
     /* ############///////////
     #
-    #
-    #
-    #%%%%%% Contact page %%%%%%%%%
-    #
+    #%%%%%% Contact page %%%%%%%%
     #
     ################# */
     
@@ -680,41 +642,19 @@ footer{
     }
 
     /* ####End of contact page */
-
-
-
-
-    /*######
-    ###
-    ###
-    ### Check-Out.html page 
-    ##
-    #
-    # */
-
-    .checkout-prodt-shipping,.checkout-prodt-total-price,.checkout-button{
-        margin-left: 0;
-    }
-   
-    /* ##### END OF CHECKOUT PAGE ##### */
-
-
-
 }
 
 /*
 *
-************ 760px media query *********
+************ 800px media query *********
 *
 *
  */
-@media only screen and (max-width: 760px){
+@media only screen and (max-width: 800px){
 
     .main-container{
         width:100%;
-
-
-     }
+    }
       /* nav logo */
 
     .logo img{
@@ -725,7 +665,7 @@ footer{
     /* Desktop navbar- menu disabled */
     nav .nav-desktop{
        display: none;
-     }
+    }
 
      /* Mobile navbar enabled */
      
@@ -733,97 +673,45 @@ footer{
         display: inline;
         cursor: pointer;
         z-index: 20;
-     }
+    }
      
     #menu-checkbox:checked ~ #mobile-nav{
        display: flex;
        z-index: 10;
-       
     }
 
-     /* end of mobile navbar */
+    /* end of mobile navbar */
+    /* Jumbotron section */
+    .jumbotron{
+        display: flex;
+        flex-direction: column;
+    }
 
-
-
-       /* Jumbotron section */
-
-       .jumbotron
-       {
-           display: flex;
-           flex-direction: column;
-
-       }
-
-       /* Tablet size image for home page jumbotron */
-      .btn-outeryellow.jumbo{
-        color: white;
-       }
+    
     /* ----Container-2-----  */
 
-     .container-2 p{
-        font-size: 35px;
-        line-height: 44px;
-     }
-
+   
     /* --end of container-2 --- */
 
     /* -----Container-4--  */
-    .container-4{
-        background-image: url("tablet-images/home/Container_5_background.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-
-    }
-
-    .container-4 h4{
-        font-size: 30px;
-    }
-
-    .container-4 h5{
-        font-size: 13px;
-    }
-    .container-4 p{
-       font-size: 20px;
+    .blog-text-brief p{
+        margin-right: 3rem;
     }
     /* ---end of container-4-- */
-
-    /* ---Container-5 ----- */
-
-    .container-5 h4{
-     font-size: 25px;
-     line-height: 30px;
-    }
-
-    .container-5 p{
-        font-size: 20px;
-        line-height: 24px;
-    }
-
-    .container-5 input{
-        width: 50%;
-    }
-
-    .btn-black.cont-5{
-        padding: 18px 20%;
-    }
-    /* ---End of container-5 ---- */
 
     /* ----footer--- */
     .footer-logo{
         display: none;
     }
-    
-
-     nav .footer-nav{
+    nav .footer-nav{
         display: none;
-      }
-
-      nav .social-media{
+    }
+    nav .social-media{
         display: grid;
         grid-template-columns: 3fr 3fr 2fr;
         justify-items: center;
         width: 100%;
-      }
+    }
      /* end of footer navbar */
 
 
@@ -849,13 +737,10 @@ footer{
         background-size: cover;
         clip-path: none;
         max-width: 100%;
-   }
+    }
 
-   /* ############## end of about page ############ */
-
-
-
-  /*######
+    /* ############## end of about page ############ */
+    /*######
     ###
     ###
     ### Check-Out.html page 
@@ -875,167 +760,68 @@ footer{
 
    /* ### PAYMENT SUCESSFULL PAGE */
  
-   .paymentsucessfull-txt{
-    color: var(--our-black);
-}
+    .paymentsucessfull-txt{
+        color: var(--our-black);
+    }
    /* ### END OF PAYMENT SUCESSFULL PAGE */
-
-
 }
-
-
 /*
 ¤
-¤ *********** 550px media query **********
+¤ *********** 650px media query **********
 ¤
 ¤ */
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 650px){
 
 
     /* desktop navbar should be disable  */
-
-     .main-container{
-        width:100%;
-        padding-left: 5px;
-        padding-right: 5px;
-        margin-right: auto;
-        margin-left: auto;
-     }
-
-   nav .nav-mobile{
-    margin-top: 13%;
-   }
-   
-   nav .social-media li a{
-    font-size: 15px;
-   }
-   
-  /* Jumbotron section */
-
-  .jumbotron{
-      display: flex;
-      flex-direction: column;
-      /* align-items: center; */
-      justify-content: center;
-      background-color: transparent;
-
-   }
-
-
-.jumbotron-image{
-    object-fit: cover;
-    background-image: linear-gradient(
-      to right,
-      hsl(0deg 0% 0% / 70%),
-      transparent 50%
-  ),url("mobile-images/home/home.jpg");
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-}
-  .jumbotron-text h1{
-      font-size: 25px;
-     }
-
-   .jumbotron-text h3{
-
-    font-size: 16px;
-    margin-bottom: 18px;
-
-  }
-
-  .jumbo-buttons{
-    display: none;
-  }
-
-   .btn-yellow.jumbo{
-
-      padding: 7px 25px;
-      margin-right: 10px;
-      margin-bottom: 40px;
-      font-weight: 400;
-      font-size: 12px;
-
-  }
-
-  .btn-outeryellow.jumbo{
-
-      padding: 7px 25px;
-      font-weight: 400;
-      font-size: 12px;
-
-  }
-
-  /* End of jumbotron section */
-
-
-  /* ---container-2 --- */
-   .container-2{
-    margin-top: 50px;
-   }
-  .container-2 p{
-    font-size: 25px;
-    line-height: 30px;
- }
-  /* ----end of container-2 */
-
-   /* .....container3---- */
-    .container-3{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        
+    nav .nav-mobile{
+        margin-top: 13%;
     }
-   /* ---end of container-3 */
+    nav .social-media li a{
+        font-size: 15px;
+    }
+    /* Jumbotron section */
+
+    .jumbotron{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        background-color: transparent;
+    }
 
 
-   /* -----Container-4--  */
-   .container-4{
-    background-image: url("mobile-images/home/Container_5_background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    .jumbotron-image{
+        object-fit: cover;
+        background-image: linear-gradient(
+            to right,
+            hsl(0deg 0% 0% / 70%),
+            transparent 50%),url("mobile-images/home/home.jpg");
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    }
+    /* End of jumbotron section */
+    
+    /* ------Conrtainer-2 ------ */
+        .feature-products-card img{
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    /* ------End of Conrtainer-2 ----*/
+    /* -----Container-4--  */
+        .blog-cont4{
+            display: flex;
+            flex-direction: column;
+        }
+    /* ---end of container-4-- */
 
+    /* ----- Blog Page ----- */
+        .single-blogpost img{
+            height: 300px;
+        }
+    /* ----- End of Blog Page ----- */
 
-    .container-4 h4{
-     font-size: 25px;
-}
-
-    .container-4 h5{
-     font-size: 10px;
-}
-    .container-4 p{
-      margin:1% 0 6% 0;
-     font-size: 17px;
-}
-/* ---end of container-4-- */
-
- /* ---Container-5 ----- */
-
- .container-5 h4{
-    font-size: 25px;
-    line-height: 30px;
-   }
-
-   .container-5 p{
-       padding-left: 3%;
-       padding-right: 3%;
-       font-size: 17px;
-       line-height: 20px;
-   }
-
-   .container-5 input{
-
-       width: 65%;
-   }
-
-   .btn-black.cont-5{
-       padding: 18px 25%;
-   }
-
-
-
-   /* ---End of container-5 ---- */
-
-   /* ########## About-page ####### */
+    /* ########## About-page ####### */
 
     .about-jumbotron-image{
         background-image: linear-gradient(
