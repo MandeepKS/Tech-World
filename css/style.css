@@ -430,13 +430,13 @@ footer{
     text-align:start; 
 }
 .blog-description ol, .blog-description li{
-    padding:1rem;
+    padding:0.5rem;
     font-size: 14px;
-    margin-left: 1rem;
+    margin-left:0.2rem;
 }
 .blog-description ul, .blog-description li{
-    padding:1rem;
-    margin-left: 1rem;
+    padding:1rem,1rem,1rem,0;
+    
 }
 .blog-description ol li:hover{
     color: black;
@@ -931,4 +931,14 @@ footer{
     margin-bottom: 50%;
 }
    /* ### END OF PAYMENT SUCESSFULL PAGE */
+}
+
+    /* 400px screen media query */
+@media only screen and (max-width: 400px){
+    
+    /* Blog page */
+    .blog-container-1{
+        margin:1rem;
+    }
+    /* End of blog page */
 }
