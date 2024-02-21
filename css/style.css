@@ -324,11 +324,17 @@ nav .footer-nav li,nav .social-media{
 
 /* Container -3 */
 .super-container-img{
-    display:flex;
-    align-items: center;
-    justify-content: center;
     margin: 4rem;
+    margin-left:20vw;
+    /* margin-right: 20vw; */
+    background-image: url("/images/home/Tech-Container-3.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    max-width: 100%;
+    min-height: 600px;
 }
+
+
 
 /* End of container -3 */
 
@@ -608,12 +614,39 @@ footer{
         margin-left:6rem;
         margin-right:6rem;
     }
+
+    /* -----Container-3----- */
+    .super-container-img{
+        margin-left:40vw;
+    }
+    /* -----End of Container-3----- */
 }
 
 /* Responsiveness Table and desktop */
 
 @media only screen and (max-width:900px){
- 
+    /*----- Home page ---- */
+
+    /*-------- Jumbotron-------- */
+    .jumbotron-image{
+        background-image: url("/images/tablet/home.jpg");
+    }
+    /*--------End of Jumbotron-------- */
+    
+    /* ----Container-3-----  */
+    .super-container-img{
+        background-image: url("/images/tablet/Tech-Container-3.jpg");
+        background-repeat: no-repeat;
+        background-size:auto;
+        max-width: 100%;
+        min-height: 400px;
+    }
+   
+    /* --end of container-3 --- */
+    /* ------ End of Container-3----- */
+
+    /*-----End of Home page ---- */
+
     /* ############///////////
     #
     #%%%%%% Contact page %%%%%%%%
@@ -690,13 +723,6 @@ footer{
         display: flex;
         flex-direction: column;
     }
-
-    
-    /* ----Container-2-----  */
-
-   
-    /* --end of container-2 --- */
-
     /* -----Container-4--  */
     
     /* ---end of container-4-- */
@@ -797,8 +823,8 @@ footer{
         background-image: linear-gradient(
             to right,
             hsl(0deg 0% 0% / 70%),
-            transparent 50%),url("mobile-images/home/home.jpg");
-        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+            transparent 50%),url("/images/mobile/home.jpg");
+       
     }
     /* End of jumbotron section */
     
@@ -812,6 +838,12 @@ footer{
             margin-right:0.5rem;
         }
     /* ------End of Conrtainer-2 ----*/
+    /* -------Container-3------ */
+    .super-container-img{
+        margin-left: 10vw;
+    }
+    /* -------End of Container-3------ */
+    
     /* -----Container-4--  */
         .blog-cont4{
             display: flex;
@@ -937,8 +969,8 @@ footer{
    /* ### END OF PAYMENT SUCESSFULL PAGE */
 }
 
-    /* 400px screen media query */
-@media only screen and (max-width: 400px){
+    /* 450px screen media query */
+@media only screen and (max-width: 450px){
     
     /* Blog page */
     .blog-container-1{
@@ -955,4 +987,16 @@ footer{
         margin-right: -1.7rem;
     }
     /* End of Home page carousel slider */
+
+    /* ------ Contaier-3 ----- */
+    .super-container-img{
+        background-image: url("/images/mobile/Tech-Container-3.jpg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        max-width: 100%;
+        min-height: 250px;
+        margin-left: 0.5vw;
+        margin-right:0.5vw;
+    }
+    /* ------End of  Contaier-3 ----- */
 }
