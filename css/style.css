@@ -501,19 +501,19 @@ footer{
 
  /* about container-2 */
 
- .about-our-story, .about-our-product{
+.about-our-story{
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-    margin: 10% 1% 2% 1%;
+    margin: 5% 1% 2% 1%;
     padding: 2%;
 }
 
- .about-story-par, .about-product-par{
-    color: var(--font-about-grey);
+.about-story-par{
     margin-top: 2%;
 }
+
  /* end about container-2 */
 
     /* ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ End of About-Page ¤¤¤¤¤¤¤¤¤¤¤¤ */
@@ -768,30 +768,6 @@ footer{
     }
 
     /* ############## end of about page ############ */
-    /*######
-    ###
-    ###
-    ### Check-Out.html page 
-    ##
-    #
-    # */
-
-    .checkout-produt-title{
-        font-size: 18px;
-    }
-    
-    .checkout-prodt-price{
-        font-size: 16px;
-    }
-   /* ### end of checkout page #### */
-
-
-   /* ### PAYMENT SUCESSFULL PAGE */
- 
-    .paymentsucessfull-txt{
-        color: var(--our-black);
-    }
-   /* ### END OF PAYMENT SUCESSFULL PAGE */
 }
 /*
 ¤
@@ -1007,4 +983,21 @@ footer{
     .contact-container-2 input,textarea,label{
         width:100%;
     }
+      /*######
+    ###
+    ###
+    ### Contact uspage 
+    ##
+    #
+    # */
+
+    .about-our-story p,.about-story-par p{
+        font-size: 12px;   
+       }
+    .about-our-story h1{
+        font-size: 19px;
+    }
+    .about-story-par{
+        margin-right: 1rem;
+    } 
 }   
