@@ -999,4 +999,12 @@ footer{
         margin-right:0.5vw;
     }
     /* ------End of  Contaier-3 ----- */
-}
+
+    /* ****
+    *  Contact Page
+    * */
+
+    .contact-container-2 input,textarea,label{
+        width:100%;
+    }
+}   
