@@ -1,9 +1,9 @@
-// import { jacketscollectionHomePage } from "./home.js";
+
 import { blogpostPage } from "./blogpost.js";
 import { blogcollectionHomePage} from "./home.js";
 import { blogscollectionPage } from "./postblogs.js";
 
-// import { checkoutPage } from "./checkout.js";
+
 
 
 
@@ -21,9 +21,3 @@ if(location.pathname === "/bloglist" || location.pathname === "/bloglist.html"){
 if(location.pathname === "/blog" || location.pathname === "/blog.html"){
   blogpostPage();
 }
-
-
-// if(location.pathname === "/checkout.html" || location.pathname === "/checkout")
-// {
-//   checkoutPage();
-// }

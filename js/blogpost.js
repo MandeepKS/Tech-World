@@ -42,7 +42,7 @@
    var image = 'blog_post_layout_featured_media_urls';
    var blogImage = blogData[image].full[0];
   //  var blogImageAlt = blogData._embedded[image][0].alt_text;
-   console.log(blogImage);
+  
    const blogDate = new Date(blogData.date);
    const newDate = blogDate.getDate();
    const newMonth = blogDate.getMonth()+1; //we added +1 in  getMonth bcoz, this function start indexing with zero(0).
@@ -75,7 +75,7 @@
         renderBlog(singleBlog);
 
     } catch (error){
-        alert("Error :"+ error);
+        alert("Error : Page not found!");
     }
  }
  

@@ -74,7 +74,7 @@ export async function renderBlogs(listOfjackets) {
        listOfjackets.forEach(renderBlog);
   } catch (error) 
   {
-     alert("Error: " + error);
+     alert("Error: Page not found!, Please try other number!");
   }
  
  }
