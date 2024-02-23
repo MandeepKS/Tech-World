@@ -171,20 +171,12 @@ nav .footer-nav li,nav .social-media{
    max-width:1600px;
    margin: auto;
    padding: 0 3rem;
-   @media screen and (max-width:991px){
-    display: block;
-    padding: 0 1rem;
-}
 }
 
 .section_image{
     width:50%;
 }
-@media screen and (max-width:991px){
-    div.section_image{
-        width:100%;
-    } 
-}
+
 .section_image img{
 width:100%;
 max-width:100%;
@@ -192,15 +184,10 @@ max-width:100%;
 .section_content{
     padding: 2rem 3rem;
     max-width: 500px;
-    @media screen and (max-width:991px){
-        padding:2rem 1rem ;
-    }
 }
 .heading{
     margin: 1rem 0;
-    @media screen and (max-width:991px){
-        font-size: 22px;
-    }
+    
 }
 
 
@@ -218,13 +205,27 @@ max-width:100%;
     text-align: center;
     padding: 2rem 2rem 3rem 2rem;
     max-width: 900px;
-    @media screen and (max-width:991px){
-        padding:2rem 1rem ;
-    }
+   
 }
 
 
 /*media queries*/
+@media screen and (max-width:991px){
+    .section_inner{
+        display: block;
+    padding: 0 1rem;
+    }
+    .heading{
+        font-size: 22px;        
+    }
+    .section_content{
+        padding:2rem 1rem ;
+    }
+    .section_intro .section_content{
+        padding:2rem 1rem ;
+    }
+    
+}
 @media screen and (min-width:991px){
     
     .ingress{
@@ -237,6 +238,11 @@ max-width:100%;
     .section_intro .ingress{
         font-size: 1.5rem;
     }
+}
+@media screen and (max-width:991px){
+    div.section_image{
+        width:100%;
+    } 
 }
 /* End of Section intro */
 
@@ -607,14 +613,20 @@ footer{
 
 
  /* about container-2 */
-
+.about-section{
+    display: block;
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    padding-bottom: 10rem;
+}
 .about-our-story{
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-    margin: 5% 1% 2% 1%;
-    padding: 2%;
+    margin: 4% 1% 0 1%;
+    padding: 2% 2% 0 2%;
 }
 
 .about-story-par{
@@ -724,7 +736,8 @@ footer{
 
     /* -----Container-3----- */
     .super-container-img{
-        margin-left:40vw;
+        margin-left:0;
+        background-position: center;
     }
     /* -----End of Container-3----- */
 }
