@@ -779,6 +779,7 @@ footer{
     }
       /* nav logo */
     .logo img{
+        width:188px;
         margin-right: 0;
     }
 
