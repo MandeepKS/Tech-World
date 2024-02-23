@@ -184,7 +184,7 @@ max-width:100%;
     margin: 1rem 0;
 }
 .ingress{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
 }
 .readmore{
@@ -356,6 +356,20 @@ max-width:100%;
     animation-name: scaleout;
     animation-duration: 1.5s;
 }
+
+/*   Blog items */
+.blog-image{
+    overflow: hidden;
+}
+.blog-info{
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+}
+.blog-info h4{
+    font-size: 18px;
+}
+/*   End of Blog items */
 @keyframes scaleout{
     0%{transform: scale(1,1);}
     50%{transform: scale(1.1,1.1);}
