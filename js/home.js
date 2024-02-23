@@ -119,12 +119,13 @@
       var blogImageAlt = blogData._embedded[image][0].alt_text;
 
       const blogElements = document.querySelector(".carousel-inner");
-      blogElements.innerHTML += `<a href="blog.html?id=${blogData.id}">
+      blogElements.innerHTML += `<a href="blog.html?id=${blogData.id}" class="blog-item">
                                     <div class="feature-products-card blog-slider">
-                                       <img src="${blogImage}" alt="${blogImageAlt}">
+                                       <div class="blog-image"><img src="${blogImage}" alt="${blogImageAlt}"></div>
+                                       <div class="blog-info"> 
                                        <p>Blog article</p>
                                        <h4 class="ftr-prdt-name">${blogData.title.rendered}</h4>
-                                    </div>
+                                       </div></div>
                                  </a>`
       
       prevBtn.addEventListener("click", prevSlide);
