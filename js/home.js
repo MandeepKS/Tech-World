@@ -57,13 +57,16 @@
 
       const blogArticleElements = document.querySelector(".blog-cont4");
       blogArticleElements.innerHTML += `<a href="blog.html?id=${blogData.id}"
-                                          <div class="feature-products-card blog-brief">
-                                             <img src="${blogImage}" alt="${blogImageAlt}">
-                                             <p>${modifiedBlogDate}</p>
-                                             <h4 class="ftr-prdt-name">${blogData.title.rendered}</h4>
-                                             <span class="blog-text-brief">
-                                                <p>${blogData.excerpt.rendered}</p>
-                                             </span>
+                                          <div class="feature-products-card blog-brief">   
+                                             <div class="blog-image"><img src="${blogImage}" alt="${blogImageAlt}"></div>
+                                             <div class="blog-info"> 
+                                                   <p>${modifiedBlogDate}</p>
+                                                <h4 class="ftr-prdt-name">${blogData.title.rendered}</h4>
+                                                <div class="blog-text-brief">
+                                                   <p>${blogData.excerpt.rendered}</p>
+                                                </div>
+                                             </div>
+                                             
                                           </div>
                                        </a>`
                                                                    
