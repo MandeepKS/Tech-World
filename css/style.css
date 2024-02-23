@@ -170,6 +170,7 @@ nav .footer-nav li,nav .social-media{
    padding: 0 3rem;
    @media screen and (max-width:991px){
     display: block;
+    padding: 0 1rem;
 }
 }
 
@@ -188,6 +189,9 @@ max-width:100%;
 .section_content{
     padding: 2rem 3rem;
     max-width: 500px;
+    @media screen and (max-width:991px){
+        padding:2rem 1rem ;
+    }
 }
 .heading{
     margin: 1rem 0;
