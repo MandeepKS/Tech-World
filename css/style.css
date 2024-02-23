@@ -1,14 +1,14 @@
 /* Fonts imported from google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inder&family=Inria+Sans:wght@300&family=Inria+Serif:wght@400;700&family=Inter:wght@300;500;600;700&family=Istok+Web:wght@400;700&display=swap');
 .fontbasic{
-
-font-family: 'Inder', sans-serif;
+    
+/*font-family: 'Inder', sans-serif;
 font-family: 'Inria Sans', sans-serif;
 font-family: 'Inria Serif', serif;
 font-family: 'Inter', sans-serif;
-font-family: 'Istok Web', sans-serif;
+font-family: 'Istok Web', sans-serif;*/
 }
-
 
 /* Color Variables are registered in root */
 :root{
@@ -23,15 +23,22 @@ font-family: 'Istok Web', sans-serif;
 }
 
 /* universal selector  */
+html,body{
+    font-family: "Montserrat", sans-serif;
+}
 *{
   padding: 0;
   margin: 0;
 }
 
-body{
-    font-family: 'Inter', sans-serif;
-
+.section{
+    padding: 5rem 0;
 }
+.section_gray{
+    background-color: var(--our-grey);
+}
+
+
 
 .main-container{
   max-width: 100%;
@@ -149,11 +156,10 @@ nav .footer-nav li,nav .social-media{
 
 
 /* Main body starts with jumbortron */
-/* Section intro */
-.section{
-    padding: 5rem 0;
-    background-color: var(--our-grey);
-}
+
+
+/* Section top */
+
 .section_inner{
    display: flex;
    justify-content: center;
@@ -177,7 +183,10 @@ max-width:100%;
 .heading{
     margin: 1rem 0;
 }
-
+.ingress{
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
 .readmore{
     color: var(--our-mehroon-red);
     border-bottom:1px solid var(--our-mehroon-red);
@@ -186,6 +195,21 @@ max-width:100%;
     display: inline-block;
     text-decoration: none;
 }
+
+/* Section intro */
+.section_intro .section_content{
+    text-align: center;
+    padding: 2rem 2rem 3rem 2rem;
+    max-width: 900px;
+}
+.section_intor .heading{
+    font-size: 2.5rem;
+}
+.section_intor .ingress{
+    font-size: 1.5rem;
+}
+
+/* End of Section intro */
 
 .jumbotron
 {
@@ -213,14 +237,12 @@ max-width:100%;
 }
 
 .jumbotron-text h1{
-   font-family:'Istok Web', sans-serif;
    font-size: 40px;
    /* text-align: right; */
    align-items: center;
 }
 
 .jumbotron-text h3{
-    font-family: 'Inria Sans', sans-serif;
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 15px;
@@ -303,7 +325,6 @@ max-width:100%;
 .feature-products-card{
     display: flex;
     flex-direction: column;
-    font-family: 'Inter', sans-serif;
     border:2px solid white;
     border-radius: 25px;
     background: white;
