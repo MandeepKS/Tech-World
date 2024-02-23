@@ -11,21 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- JavaScript -->
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/index.js" defer></script>
 
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/076a43e25b.js" crossorigin="anonymous"></script>
-     <!-- Hotjar Tracking Code for my site -->
-     <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:3872559,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
 </head>
 <body>
     <!-- main-container -->
@@ -34,7 +23,7 @@
             <!-- navbar -->
             <nav class="navbar">
                 <input type="checkbox" name="menu-checkbox" id="menu-checkbox">
-                <label class="hamburger-open" for="menu-checkbox"><i class="fa fa-bars fa-2x"></i>.</label>
+                <label class="hamburger-open" for="menu-checkbox"><i class="fa fa-bars fa-2x">.</i></label>
                 <!-- Logo  -->
                 <div class="logo">
                     <a href="index.html"><img src="/images/logo/tech-logo.svg" alt="Tech World logo"></a>
@@ -60,15 +49,18 @@
             <!-- end of navbar -->
         </header>
         <!-- jumbotron -->
-        <div class="jumbotron">
-            <div class="jumbotron-image">
-                <!-- image from css -->
+        <div class="section">
+          <div class="section_inner">
+            <div class="section_image"><img src="https://tech.shopnorwaymks.no/ethical-hacking/ethical-hacking/" alt="Ethical Hacking"></div>
+            <div class="section_content">
+                <div class="date">11/2/2024</div>
+                <h1 class="heading">Ethical Hacking</h1>
+                <div class="ingress">
+                    Ethical hacking, also known as penetration testing or white-hat hacking, refers to the practice of cybersecurity professionals.
+                </div>
+                <a class="readmore" href="blog.html?id=198">Read more</a>
             </div>
-
-            <div class="jumbotron-text">
-                <h1>Welcome To Tech World!</h1>
-                <h3>AI is your future.</h3>
-              </div>
+        </div>  
         </div>
         <!-- end of jumbotron container -->
         
@@ -81,7 +73,7 @@
                     <div class="carousel-inner">
                         <!-- <a href="blog.html?id=" id="blogAnchortag">
                             <div class="feature-products-card carousel-inner">
-                                    <img src="${blogImage}" alt="${blogImageAlt}">
+                                <img src="${blogImage}" alt="${blogImageAlt}">
                                 <p>Blog article</p>
                                 <h4 class="ftr-prdt-name">${blogData.title.rendered}</h4>
                             </div>
@@ -92,12 +84,14 @@
             </div>
         </div>
         <!--End of Container-2 -->
+                    
         
         <!-- Container-3 -->
         <div class="super-container-img">
-           
-        </div>
+            
+        </div>    
         <!-- End of Container-3 -->
+           
         
         <!-- Container-4 -->
         <div class="super-container-blog">
