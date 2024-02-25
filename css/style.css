@@ -53,17 +53,34 @@ html,body{
 .btn-yellow{
     color:white;
     text-decoration: none;
+    font-size: 13px;
+    font-weight:600;
     background-color: var(--our-mehroon-red);
     border-radius: 50px;
-    transition: ease-in 0.4s;
+    transition: ease-in 0.5s;
+    border: none;
 
 }
 
 .btn-yellow:hover{
-  background-color: var(--our-light-pink);
+  background-color: var(--font-dark-grey);
   color:var(--our-black);
+  transition: ease-out 0.5s;
 }
+
+/* Load more button */
+.load-more-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:0.5rem;
+    margin: 1rem auto;
+    width:150px;
+    text-transform: uppercase;
+}   
+
 /* ---end of buttons */
+
 
 
 /* Navbar styling */
@@ -208,42 +225,6 @@ max-width:100%;
    
 }
 
-
-/*media queries*/
-@media screen and (max-width:991px){
-    .section_inner{
-        display: block;
-    padding: 0 1rem;
-    }
-    .heading{
-        font-size: 22px;        
-    }
-    .section_content{
-        padding:2rem 1rem ;
-    }
-    .section_intro .section_content{
-        padding:2rem 1rem ;
-    }
-    
-}
-@media screen and (min-width:991px){
-    
-    .ingress{
-        font-size: 1.2rem;
-        line-height: 1.6rem;
-    }
-    .section_intro .heading{
-        font-size: 2.5rem;
-    }
-    .section_intro .ingress{
-        font-size: 1.5rem;
-    }
-}
-@media screen and (max-width:991px){
-    div.section_image{
-        width:100%;
-    } 
-}
 /* End of Section intro */
 
 .jumbotron
@@ -580,6 +561,15 @@ footer{
     margin-top:2rem;
 }
 /* End of Blog post page */
+
+/* Blog-post list
+   This css property to hide the content 
+   after 9th iteration. */
+.blog-cont4-inner:nth-child(9) ~ a{
+    display: none;
+}
+/* End of Blog post list */
+
 /*
 #
 #
@@ -743,6 +733,41 @@ footer{
 }
 
 /* Responsiveness Table and desktop */
+/*media queries*/
+@media screen and (max-width:991px){
+    .section_inner{
+        display: block;
+    padding: 0 1rem;
+    }
+    .heading{
+        font-size: 22px;        
+    }
+    .section_content{
+        padding:2rem 1rem ;
+    }
+    .section_intro .section_content{
+        padding:2rem 1rem ;
+    }
+    
+}
+@media screen and (min-width:991px){
+    
+    .ingress{
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    .section_intro .heading{
+        font-size: 2.5rem;
+    }
+    .section_intro .ingress{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:991px){
+    div.section_image{
+        width:100%;
+    } 
+}
 
 @media only screen and (max-width:900px){
     /*----- Home page ---- */

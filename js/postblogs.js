@@ -1,7 +1,8 @@
 /* --------------------------------------------
  import apiconnection is for accessing the api
  --------------------------------------------- */
-import {apiUrl} from "./apiconnection.js";
+import {apiUrlPaging} from "./apiconnection.js";
+var totalNumberofBlogs = 0;
 
 
 
@@ -11,7 +12,7 @@ import {apiUrl} from "./apiconnection.js";
    -------------------------------*/
   export async function getBlogs() {
       
-    const response = await fetch(apiUrl);
+    const response = await fetch(apiUrlPaging);
     const blogposts = await response.json();
     
     if (!response.ok){
@@ -38,20 +39,19 @@ function renderBlog(blogData) {
   Bcoz of : colon, javascript not recognize colon.
   So, i convert wp:featuredmedia into string. 
   */
+   var image = 'wp:featuredmedia';
+   var blogImage = blogData.blog_post_layout_featured_media_urls.full[0];
+   var blogImageAlt = blogData.title.rendered;
   
-  var image = 'wp:featuredmedia';
-  var blogImage = blogData._embedded[image][0].link;
-  var blogImageAlt = blogData._embedded[image][0].alt_text;
-  
-  const blogDate = new Date(blogData.date);
-  const newDate = blogDate.getDate();
-  const newMonth = blogDate.getMonth()+1; //we added +1 in  getMonth bcoz, this function start indexing with zero(0).
-  const newYear = blogDate.getFullYear();
+   const blogDate = new Date(blogData.date);
+   const newDate = blogDate.getDate();
+   const newMonth = blogDate.getMonth()+1; //we added +1 in  getMonth bcoz, this function start indexing with zero(0).
+   const newYear = blogDate.getFullYear();
 
-  const modifiedBlogDate = newDate+'/'+ newMonth +'/'+ newYear;
-  const blogArticleElements = document.querySelector(".blog-cont4");
-  blogArticleElements.innerHTML += `<a href="blog.html?id=${blogData.id}"
-                                        <div class="feature-products-card blog-brief">
+   const modifiedBlogDate = newDate+'/'+ newMonth +'/'+ newYear;
+   const blogArticleElements = document.querySelector(".blog-cont4");
+   blogArticleElements.innerHTML += `<a href="blog.html?id=${blogData.id}"
+                                        <div class="feature-products-card blog-brief blog-cont4-inner">
                                            <img src="${blogImage}" alt="${blogImageAlt}">
                                            <p>${modifiedBlogDate}</p>
                                            <h4 class="ftr-prdt-name">${blogData.title.rendered}</h4>
@@ -59,19 +59,48 @@ function renderBlog(blogData) {
                                               <p>${blogData.excerpt.rendered}</p>
                                            </span>
                                         </div>
-                                     </a>`
+                                     </a>`;
+   totalNumberofBlogs = blogArticleElements;                                                                
 }
 
-
+/* ----------------------------------
+         Load more button function 
+   ----------------------------------- */
+   
+      let currentItems = 9;   
+      function loadMore(){
+         let loadBtn = document.getElementById("loadMore");
+         const blogArticleElements = document.querySelectorAll(".blog-cont4-inner");
+         for(let i= currentItems; i< currentItems+3;i++){
+               setTimeout(function(){
+                  if(blogArticleElements[i]){
+                     blogArticleElements[i].style.display = 'flex';
+                  }
+               },500);
+         }
+         currentItems +=3;
+         if(currentItems >= blogArticleElements.length){
+            loadBtn.style.display = 'none';
+         }
+         else{
+            loadBtn.style.display = 'flex';
+         }
+   };
+   
+     
 /* -------------------------------------------------
-    this method is render the list of jackets,
-    with the help of forEach loop.
+   
     ***********************************
     this function generate list of jackets
    ------------------------------------------------- */
 export async function renderBlogs(listOfjackets) {
   try {
-       listOfjackets.forEach(renderBlog);
+      //  listOfjackets.forEach(renderBlog);
+      for(let i=0;i<listOfjackets.length;i++){
+         renderBlog(listOfjackets[i]);
+         // loadMore(listOfjackets[i]); 
+         // totalNumberofBlogs = listOfjackets[i];
+      }
   } catch (error) 
   {
      alert("Error: Page not found!, Please try other number!");
@@ -83,7 +112,7 @@ export async function renderBlogs(listOfjackets) {
     THis function we can say main() ,  this function will be 
      run in index.js
     --------------------------------------------  */
- export async function blogscollectionPage(){
+export async function blogscollectionPage(){
   
   /* --------------------------------------------
      with the help of (collection_of_jackets) variable
@@ -92,7 +121,12 @@ export async function renderBlogs(listOfjackets) {
       for rendering. 
 
      ----------------------------------------------- */
-  const collection_of_jackets = await getBlogs();
-  renderBlogs(collection_of_jackets);
+   const collection_of_jackets = await getBlogs();
+   renderBlogs(collection_of_jackets);
+
+   const loadBtn = document.getElementById("loadMore");
+   loadBtn.addEventListener("click",loadMore);  
 }
+
+
 

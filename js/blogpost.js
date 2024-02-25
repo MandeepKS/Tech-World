@@ -38,7 +38,7 @@
    Bcoz of : colon, javascript not recognize colon.
    So, i convert wp:featuredmedia into string. 
    */
-   console.log(blogData);
+
    var image = 'blog_post_layout_featured_media_urls';
    var blogImage = blogData[image].full[0];
   //  var blogImageAlt = blogData._embedded[image][0].alt_text;

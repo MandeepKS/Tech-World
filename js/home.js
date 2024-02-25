@@ -74,10 +74,10 @@
  
  
    /* -------------------------------------------------
-      this function generate list of jackets 
+     
       ***********************************
-      this method is render the list of jackets,
-      with the help of forEach loop.
+      this method is render the list of blogs,
+      with the help of for loop.
       ------------------------------------------------- */
    export async function renderBlogs(blogList) {
        try {
@@ -85,7 +85,7 @@
                renderBlog(blogList[i]);
             }
        } catch (error) {
-          alert("Error : " + error);
+          console.log("Error : " + error);
        }
        
   }
@@ -98,7 +98,46 @@
       const collectionOfblogs = await getBlogHome();
       renderBlogs(collectionOfblogs);
       renderCarouselblogs(collectionOfblogs);
+      renderLatestHomeBlog(collectionOfblogs);
+   }
+
+   /*          --------------------------
+               Landing Home Page Function
+               ---------------------------   
+      Latest blog rendering function, at home page
+    */ 
+   export async function renderLatestHomeBlog(singleBlog) {
+      try{
+         for(let i=0;i<1;i++){
+            singleLatestHomeBlog(singleBlog[i]);
+         }
+      }catch (error) {
+         console.log("Error : " + error);
+      }
+   }
+
+   export async function singleLatestHomeBlog(blogData) {
+      var image = 'wp:featuredmedia';
+      var blogImage = blogData._embedded[image][0].link;
+      var blogImageAlt = blogData._embedded[image][0].alt_text;
+
+      const blogDate = new Date(blogData.date);
+      const newDate = blogDate.getDate();
+      const newMonth = blogDate.getMonth()+1; //we added +1 in  getMonth bcoz, this function start indexing with zero(0).
+      const newYear = blogDate.getFullYear();
+
+      const modifiedBlogDate = newDate+'/'+ newMonth +'/'+ newYear;
       
+      const blogElements = document.querySelector(".home-container-1");
+      blogElements.innerHTML +=`<div class="section_image"><img src="${blogImage}" alt="${blogImageAlt}"></div>
+                                    <div class="section_content">
+                                       <div class="date">${modifiedBlogDate}</div>
+                                       <h1 class="heading">${blogData.title.rendered}</h1>
+                                    <div class="ingress">
+                                       ${blogData.excerpt.rendered}
+                                    </div>
+                                    <a class="readmore" href="blog.html?id=${blogData.id}">Read more</a>
+                                 </div>`
    }
  
    /* ------------------------------------------
