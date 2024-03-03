@@ -18,6 +18,7 @@ Dive into the heart of technology with our in-depth articles. Our team of tech e
 - [HTML](https://www.w3schools.com/html/)
 - [CSS](https://www.w3schools.com/css/default.asp)
 - [JAVASCRIPT](https://javascript.info/)
+- [HEADLESS WORDPRESS](https://wordpress.com ) 
 
 ## Tool used
 - [Visual Studio Code](https://code.visualstudio.com/)
